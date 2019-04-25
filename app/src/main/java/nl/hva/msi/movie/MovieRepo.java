@@ -34,7 +34,7 @@ public class MovieRepo {
     }
 
     public void getMovies(final GetCallback callback, int ReleaseYear) {
-        api.getPopularMovies("APIKEY", ReleaseYear, LANGUAGE, 1 )
+        api.getPopularMovies(BuildConfig.ApiKey, ReleaseYear, LANGUAGE, 1 )
                 .enqueue(new Callback<MovieResponse>() {
                     @Override
                     public void onResponse(@NonNull Call<MovieResponse> call, @NonNull Response<MovieResponse> response) {
